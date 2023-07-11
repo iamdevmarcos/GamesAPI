@@ -3,11 +3,11 @@ package com.marcosmendes.gameslist.entities;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 
 import java.util.Objects;
 
-@Data
+@Getter
 @AllArgsConstructor
 @Entity
 @Table(name = "tb_game")
@@ -31,6 +31,8 @@ public class Game {
 
     @Column(columnDefinition = "TEXT")
     private String longDescription;
+
+    public Game() {}
 
     @Override
     public int hashCode() {
