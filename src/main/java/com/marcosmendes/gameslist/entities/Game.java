@@ -2,13 +2,13 @@ package com.marcosmendes.gameslist.entities;
 
 import jakarta.persistence.*;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.util.Objects;
 
 @Getter
-@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "tb_game")
 public class Game {
@@ -31,8 +31,6 @@ public class Game {
 
     @Column(columnDefinition = "TEXT")
     private String longDescription;
-
-    public Game() {}
 
     @Override
     public int hashCode() {
