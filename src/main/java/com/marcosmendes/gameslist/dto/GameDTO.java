@@ -12,6 +12,7 @@ public class GameDTO {
     private Integer year;
     private String imgUrl;
     private String shortDescription;
+    private String platforms;
 
     public GameDTO(Game game) {
         this.id = game.getId();
@@ -19,5 +20,6 @@ public class GameDTO {
         this.year = game.getYear();
         this.imgUrl = game.getImgUrl();
         this.shortDescription = game.getShortDescription();
+        this.platforms = game.getPlatforms();
     }
 }
