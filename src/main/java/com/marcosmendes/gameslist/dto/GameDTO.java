@@ -1,6 +1,7 @@
 package com.marcosmendes.gameslist.dto;
 
 import com.marcosmendes.gameslist.entities.Game;
+import com.marcosmendes.gameslist.projections.GameProjection;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -21,5 +22,14 @@ public class GameDTO {
         this.imgUrl = game.getImgUrl();
         this.shortDescription = game.getShortDescription();
         this.platforms = game.getPlatforms();
+    }
+
+    public GameDTO(GameProjection gameProjection) {
+        this.id = gameProjection.getId();
+        this.title = gameProjection.getTitle();
+        this.year = gameProjection.getYear();
+        this.imgUrl = gameProjection.getImgUrl();
+        this.shortDescription = gameProjection.getShortDescription();
+        this.platforms = gameProjection.getPlatforms();
     }
 }
